@@ -11,8 +11,12 @@ function primera() {
             alert("Eso no es un número entero colega")
         }
     } while (!esEntero);
-
-    return (numero.length);
+    let numeroCifras = 0;
+    do {
+        numero = Math.floor(numero / 10);
+        numeroCifras++;
+    } while (numero != 0);
+    return (numeroCifras);
 }
 
 /*Una función que muestre al usuario una secuencia de * 
